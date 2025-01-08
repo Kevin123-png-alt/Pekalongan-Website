@@ -1,0 +1,150 @@
+/* Mengatur halaman agar footer selalu di bawah */
+body {
+    font-family: 'Arial', sans-serif;
+    position: relative; /* Agar anak elemen bisa diatur posisinya */
+    min-height: 130vh; /* Pastikan tinggi halaman minimal 100% dari tinggi layar */
+    padding-bottom: 60px; /* Ruang untuk footer */
+    box-sizing: border-box;
+    background-color: #e9f7fe; /* Warna latar belakang halaman */
+    width: 80%; /* Ubah menjadi 80% dari lebar layar */
+    max-width: 1200px; /* Maksimal lebar body */
+    margin: 0 auto; /* Pusatkan body di tengah layar */
+    flex-direction: column;
+}
+
+footer {
+    position: absolute; /* Posisi absolut relatif terhadap body */
+    bottom: 0; /* Tempatkan di bawah */
+    width: 100%; /* Pastikan footer selebar halaman */
+    text-align: center;
+    padding: 20px;
+    background-color: #e9f7fe; 
+    color: rgb(0, 0, 0);
+}
+
+header {
+    display: flex; /* Flexbox untuk mempermudah pengaturan */
+    justify-content: center; /* Posisikan menu secara horizontal di tengah */
+    align-items: center; /* Posisikan menu secara vertikal di tengah header */
+    height: 80px; /* Tinggi header */
+    background-color: #ffffff; /* Warna latar belakang header */
+}
+
+main {
+    text-align: center;
+    margin-top: 80px;
+}
+
+#Programer {
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    padding-top: 50px;
+}
+
+#Nama {
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+
+section {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+section h1 {
+    font-family: 'Arial';
+    margin-top: 0px;
+    margin-bottom: 45px;
+    font-size: 20px;
+}
+
+section h2 {
+    font-family: 'Arial';
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 50;
+}
+
+
+.narrow-text {
+    max-width: 1000px; /* Batasi lebar teks maksimal */
+    margin: 0 auto; /* Pusatkan teks secara horizontal */
+    line-height: 1.6; /* Atur jarak antar baris untuk kemudahan membaca */
+    text-align: justify; /* Rata kanan-kiri untuk tampilan lebih rapi */
+    padding: 10px; /* Tambahkan ruang di sekitar teks */
+    background-color: #f9f9f9; /* Opsional: Tambahkan warna latar */
+    border-radius: 8px; /* Opsional: Tambahkan sudut melengkung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opsional: Tambahkan bayangan */
+}
+
+/* Atur gaya untuk menu utama */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Atur gaya untuk submenu */
+.submenu {
+    list-style-type: none;
+    position: absolute;
+    top: 100%; /* Letakkan di bawah menu utama */
+    left: 0;
+    padding: 0;
+    margin: 0;
+    display: none; /* Default: sembunyikan */
+    flex-direction: column;
+    background-color: #f1f1f1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Tampilkan submenu saat hover pada menu utama */
+.menu > li:hover .submenu {
+    display: flex;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.dropdown .submenu {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 5px 0;
+}
